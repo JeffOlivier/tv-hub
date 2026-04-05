@@ -57,7 +57,7 @@ class SearchShowsForm extends Component {
                         this.handleValidateInput(event.target.value)
                     }
                     value={this.state.searchTerm}
-                    placeholder="Enter search term"
+                    placeholder="Search TV shows..."
                 />
             </div>
         );

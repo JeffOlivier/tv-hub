@@ -1,10 +1,13 @@
 @import "./components/layouts/_pageStyling";
 
 .pageWrapper {
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
 
     .contentWrapper {
-        height: 100%;
+        flex: 1;
         margin: 20px 30px;
         padding-bottom: 30px;
         background-color: $background-color;

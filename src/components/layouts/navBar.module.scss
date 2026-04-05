@@ -2,6 +2,7 @@
     display: flex;
     padding: 15px 30px 0 30px;
     font-weight: bold;
+    color: gainsboro;
 
     .nav_item {
         text-decoration: none;
@@ -13,7 +14,7 @@
     .nav_link {
         text-decoration: none;
         &:visited {
-            color: blue;
+            color: gainsboro;
         }
     }
 }

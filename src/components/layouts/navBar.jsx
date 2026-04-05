@@ -4,55 +4,39 @@ import styles from "./navBar.module.scss";
 
 const NavBar = () => {
     return (
-        // <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className={styles.nav_container}>
             <div className={styles.nav_item}>
                 <Link className={styles.nav_link} to="/">
-                    TV Show Finder
+                    HOME
                 </Link>
             </div>
             <div className={styles.nav_spacer}> | </div>
+            {/* <div className={styles.nav_item}>
+                <Link className={styles.nav_link} to="/">
+                    TV SHOW FINDER
+                </Link>
+            </div>
+            <div className={styles.nav_spacer}> | </div> */}
             <div className={styles.nav_item}>
-                <NavLink to="/readme" className={styles.nav_link}>
-                    ReadMe / Purpose
+                <NavLink to="/about" className={styles.nav_link}>
+                    ABOUT
                 </NavLink>
             </div>
             <div className={styles.nav_spacer}> | </div>
             <div className={styles.nav_item}>
                 <a
-                    href="https://github.com/JeffOlivier/api_tv_shows"
+                    href="https://github.com/JeffOlivier/tv-hub"
                     target="_blank"
                     rel="noreferrer"
                     title="tv show finder on GitHub"
                     className={styles.nav_link}
                 >
                     <i className="fas fa-code-branch"></i>{" "}
-                    <i className="fab fa-github"></i> GitHub Repo
+                    {/* <i className="fab fa-github"></i> */}
+                    GITHUB REPO
                 </a>
             </div>
-            {/* <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <NavLink to="/readme" className="nav-item nav-link">
-                                ReadMe / Purpose
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                href="https://github.com/JeffOlivier/api_tv_shows"
-                                target="_blank"
-                                rel="noreferrer"
-                                title="tv show finder on GitHub"
-                                className="nav-item nav-link"
-                            >
-                                <i className="fas fa-code-branch"></i>{" "}
-                                <i className="fab fa-github"></i> GitHub Repo
-                            </a>
-                        </li>
-                    </ul>
-                </div> */}
         </div>
-        // </nav>
     );
 };
 

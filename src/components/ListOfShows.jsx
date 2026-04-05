@@ -13,25 +13,24 @@ class ListOfShows extends Component {
         this.fetchShows = this.fetchShows.bind(this);
     }
 
-    // urlSearchTerm = this.props.match.params.searchTerm;
-    // searchTerm = this.urlSearchTerm;
-    qSearchTerm = queryString.parse(this.props.location.search);
-    searchTerm = this.qSearchTerm.term;
+    getSearchTerm() {
+        return queryString.parse(this.props.location.search).term || "";
+    }
 
     componentDidMount() {
-        if (this.searchTerm.trim() !== "") {
+        if (this.getSearchTerm().trim() !== "") {
             this.fetchShows();
         }
     }
 
-    componentDidUpdate(previousProps, previouState) {
-        if (previousProps.searchTerm !== this.searchTerm) {
+    componentDidUpdate(previousProps) {
+        if (previousProps.location.search !== this.props.location.search) {
             this.fetchShows();
         }
     }
 
     fetchShows = async () => {
-        const searchTerm = this.searchTerm.trim();
+        const searchTerm = this.getSearchTerm().trim();
         if (searchTerm == null || searchTerm === "") return;
         const apiFullUrl = `https://api.tvmaze.com/search/shows?q=${searchTerm}`;
 

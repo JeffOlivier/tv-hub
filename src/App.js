@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Header from "./components/layouts/Header";
 import NavBar from "./components/layouts/navBar";
@@ -9,9 +9,9 @@ import ListOfShows from "./components/ListOfShows";
 import ListOfEpisodes from "./components/ListOfEpisodes";
 
 import Home from "./components/pages/Home";
-import ReadMe from "./components/pages/purpose";
+import About from "./components/pages/about";
 import NotFound from "./components/pages/NotFound";
-// import styles from "./App.scss";
+
 import "./components/layouts/PageLayoutGenericStyles.scss";
 import "./App.scss";
 
@@ -28,15 +28,13 @@ class App extends Component {
     timerId = 0;
     updateSearchTerm = (searchTerm, history) => {
         if (searchTerm !== this.state.searchTerm) {
-            // Wait 1.5 seconds before updating the state of searchTerm, if this
+            // Wait 0.3 seconds before updating the state of searchTerm, if this
             // function is called before the timer expires, restart the clock
             clearTimeout(this.timerId);
             this.timerId = setTimeout(() => {
                 this.setState({ searchTerm: searchTerm.trim() });
-                // <Redirect to={`/shows/${searchTerm.trim()}`} />;
-                // history.replace(`/shows/${searchTerm.trim()}`);
                 history.replace(`/shows?term=${searchTerm.trim()}`);
-            }, 1000); //1500 == 1.5 seconds
+            }, 300); // 300 ms = 0.3 seconds
         }
     };
 
@@ -69,7 +67,7 @@ class App extends Component {
                                 {/* <Route path="/" exact component={Home} /> */}
                                 <Redirect from="/shows" exact to="/" />
                                 <Redirect from="/shows" to="/" />
-                                <Route path="/readme" component={ReadMe} />
+                                <Route path="/about" component={About} />
                                 <Route path="/" exact component={Home} />
                                 <Redirect to="/404" />
                             </Switch>
