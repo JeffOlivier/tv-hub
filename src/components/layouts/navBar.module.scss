@@ -12,9 +12,13 @@
     }
 
     .nav_link {
+        color: gainsboro;
         text-decoration: none;
-        &:visited {
+        &:link, &:visited {
             color: gainsboro;
+        }
+        &:hover, &:active {
+            color: white;
         }
     }
 }
