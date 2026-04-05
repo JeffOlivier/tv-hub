@@ -1,6 +1,18 @@
+// Page Styling
+@import "../layouts/_pageStyling";
+
 .startText {
     text-align: center;
     font-size: large;
     font-weight: bold;
     padding-bottom: 30px;
+    width: 50%; // This is the same size as the search input field, to create a visual connection between the two elements
+    margin: 0 auto;
+
+    @media only screen and (max-width: $break1) {
+        width: 80%;
+    }
+    @media only screen and (max-width: $break3) {
+        width: 95%;
+    }
 }
