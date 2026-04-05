@@ -21,16 +21,16 @@ After the layoff, I started talking to friends who were already working with Rea
 
 **This app demonstrates the use of:**
 
-- React
-- React Router
+- React 17 (class components)
+- React Router (URL parameters, client-side routing)
 - Local state management
-- Multiple React components
-- Passing state and pointers to functions to child components
-- Accessing URL parameters
-- Responsive CSS Grid
-- Modular Sass
-- JavaScript ES6
+- Passing state and pointers to child components
 - JavaScript Fetch API with async/await
+- TVMaze REST API (no key required)
+- Sass with CSS Modules (scoped component styles)
+- Responsive CSS Grid
+- Font Awesome
+- Create React App (webpack, Babel, Jest)
 
 ## Installation
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { withRouter } from "react-router-dom";
 import CurrentShow from "./CurrentShow";
 import SingleEpisode from "./SingleEpisode";
@@ -68,7 +68,7 @@ class ListOfEpisodes extends Component {
                 (seasonNumber =
                     episode.season > seasonNumber
                         ? episode.season
-                        : seasonNumber)
+                        : seasonNumber),
         );
         this.setState({ numberOfSeasons: seasonNumber });
     }

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { withRouter } from "react-router-dom";
 import styles from "./SearchShowsForm.module.scss";
 
@@ -7,18 +7,26 @@ class SearchShowsForm extends Component {
         super(props);
         this.state = {
             isSearchFormValid: true,
+            inputValue: "",
         };
         this.handleValidateInput = this.handleValidateInput.bind(this);
     }
 
-    fubarHistory = this.props.history; //this.props.history.push('/path')
+    fubarHistory = this.props.history;
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.location.pathname !== this.props.location.pathname &&
+            ["/", "/about"].includes(this.props.location.pathname)) {
+            this.props.clearSearch();
+            this.setState({ inputValue: "" });
+        }
+    }
 
     handleValidateInput = (searchInput) => {
         const validChars = /^[a-zA-Z0-9 ]+$/i;
-        // const searchInput = e.target.value;
 
         const isFormInputValid = validChars.test(searchInput);
-        this.setState({ isSearchFormValid: isFormInputValid });
+        this.setState({ isSearchFormValid: isFormInputValid, inputValue: searchInput });
 
         if (isFormInputValid) {
             document
@@ -26,7 +34,7 @@ class SearchShowsForm extends Component {
                 .classList.remove("textInputError");
             document.getElementById("inputErrorMessage").style.display = "none";
 
-            // The input is valid, so update the state of searchTerm in PageLayout.js
+            // The input is valid, so update the state of searchTerm in PageLayout, which will trigger a new search for shows
             this.props.updateSearchTerm(searchInput, this.fubarHistory);
         } else {
             document
@@ -56,7 +64,7 @@ class SearchShowsForm extends Component {
                     onChange={(event) =>
                         this.handleValidateInput(event.target.value)
                     }
-                    value={this.state.searchTerm}
+                    value={this.state.inputValue}
                     placeholder="Search TV shows..."
                 />
             </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./SingleEpisode.module.scss";
 
 const SingleEpisode = (props) => {

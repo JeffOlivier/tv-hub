@@ -25,6 +25,11 @@ class App extends Component {
         this.updateSearchTerm = this.updateSearchTerm.bind(this);
     }
 
+    clearSearch = () => {
+        clearTimeout(this.timerId);
+        this.setState({ searchTerm: "" });
+    };
+
     timerId = 0;
     updateSearchTerm = (searchTerm, history) => {
         if (searchTerm !== this.state.searchTerm) {
@@ -48,6 +53,7 @@ class App extends Component {
                         <SearchShowsForm
                             updateSearchTerm={this.updateSearchTerm}
                             searchTerm={this.state.searchTerm}
+                            clearSearch={this.clearSearch}
                         />
                         <main className="searchResultsBlock">
                             <Switch>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { withRouter } from "react-router-dom";
 import StarRating from "./StarRating";
 import styles from "./SingleShow.module.scss";
@@ -35,7 +35,6 @@ class SingleShow extends Component {
 
                     <button
                         className={this.episodesButtonClasses}
-                        // onClick={() => props.updateShowId(props.id)}
                         onClick={this.handleEpisodes}
                         type="button"
                     >

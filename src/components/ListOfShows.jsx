@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import queryString from "query-string";
 import SingleShow from "./SingleShow";
 import styles from "./ListOfShows.module.scss";
@@ -37,12 +37,6 @@ class ListOfShows extends Component {
         const apiCall = await fetch(apiFullUrl);
         const response = await apiCall.json();
         this.setState({ shows: response });
-        // .catch(err => { console.log(err); });
-
-        // fetch(apiFullUrl)
-        //     .then(response => response.json())
-        //     .then(response => this.setState({ shows: response, loading: false }))
-        //     .catch(err => { console.log(err); });
     };
 
     render() {

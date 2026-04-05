@@ -1,13 +1,8 @@
-import React from "react";
-// import { Link } from "react-router-dom";
 import styles from "./about.module.scss";
 
 const ReadMe = () => {
     return (
         <div className={styles.readmeContainer}>
-            {/* <div className={styles.tvImage}>
-                <img src="/images/television.png" alt="TV" />
-            </div> */}
             <div className={styles.purposeContainer}>
                 <h3>Why I Built This App</h3>
                 <p>
@@ -53,16 +48,16 @@ const ReadMe = () => {
                 </div>
                 <h3>This App Demonstrates the Use of:</h3>
                 <ul>
-                    <li>React</li>
-                    <li>React Router</li>
+                    <li>React 17 (class components)</li>
+                    <li>React Router (URL parameters, client-side routing)</li>
                     <li>Local state management</li>
-                    <li>Multiple React components</li>
                     <li>Passing state and pointers to child components</li>
-                    <li>Accessing URL parameters</li>
-                    <li>Responsive CSS Grid</li>
-                    <li>Modular Sass</li>
-                    <li>JavaScript ES6</li>
                     <li>JavaScript Fetch API with async/await</li>
+                    <li>TVMaze REST API (no key required)</li>
+                    <li>Sass with CSS Modules (scoped component styles)</li>
+                    <li>Responsive CSS Grid</li>
+                    <li>Font Awesome</li>
+                    <li>Create React App (webpack, Babel, Jest)</li>
                 </ul>
 
                 {/* <h3>How to Use This App</h3>
