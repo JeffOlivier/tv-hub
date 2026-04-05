@@ -1,35 +1,45 @@
 # TV Show Search
 
-![Page Image](./public/images/television.png)
+<p>
+  <img src="./public/images/screenshot-shows.png" alt="Image 1" width="49%">
+  <img src="./public/images/screenshot-episodes.png" alt="Image 2" width="49%">
+</p>
 
-## Purpose
+[![Live Site](https://img.shields.io/badge/Live%20Site-blue)](http://tvhub.jeffolivier.com)
 
-This is an app that I created to demonstrate the use of:
+## About This Project
 
--   React
--   React Router
--   Local state management
--   Multiple React components
--   Passing state and pointers to functions to child components
--   Accessing URL parameters
--   Responsive CSS Grid
--   Modular Sass
--   JavaScript ES6
--   JavaScript Fetch API with async/await
+In May 2020, I was furloughed from a car rental company that, like most of the travel industry, was hit hard when Covid-19 brought international travel to a standstill. About two months later, along with 90% of the workforce, I was officially laid off.
 
-## Future Enhancements
+I had been coding in PHP and vanilla JavaScript since 1998, and ColdFusion from 2013 up until the layoff. I knew those technologies well, but honestly, I was starting to feel stale. The industry had moved forward and I knew that I had too.
 
--   React Hooks
--   Helmet to inject meta into the &lt;head&gt;
+I'd actually had a brief run-in with React just before the furlough — I volunteered to finish an internal dashboard someone had started. The whole "small components" philosophy was a pretty big shift from the large-file approach I was used to, and I was quickly overwhelmed. Then we were furloughed before I had a chance to figure it out.
 
-[Working Demo](http://tvshows.jeffolivier.codes)
+After the layoff, I started talking to friends who were already working with React, watched some tutorials, and began applying for React developer roles. One of those applications came with a timed coding challenge: use the TVMaze API to build a show search page in React. I didn't do great on it, but instead of letting it go, I decided to finish it properly on my own. This is that project, completed in December 2020.
 
-## How to use this app
+<p style="display:flex; flex-direction:row; align-items:center; gap:20px;">
+<span>
 
-Type a search term in the search box and after 1 second (1000 ms), an API call to api.tvmaze.com will be made and return a list of the top 10 shows based on relevance to your search term. You can then click on the **_EPISODES_** button to get a list of all the show's episodes broken out by season.
+**This app demonstrates the use of:**
 
-## Contact
+- React
+- React Router
+- Local state management
+- Multiple React components
+- Passing state and pointers to functions to child components
+- Accessing URL parameters
+- Responsive CSS Grid
+- Modular Sass
+- JavaScript ES6
+- JavaScript Fetch API with async/await
 
-To view other demo projects, visit my online [portfolio](http://jeffolivier.codes).
+</span>
+<img src="./public/images/television.png" alt="TV" width="200px">
+</p>
 
-If you'd like to hire me to be an integral part of your team, have a look at my [resume](http://jeffolivier.codes/resume.pdf), then contact me at (207) 632-1548 or send an email to [hireme@jeffolivier.codes](mailto:hireme@jeffolivier.codes).
+## Installation
+
+```bash
+npm install
+npm start
+```
